@@ -1,1 +1,8 @@
 apply plugin: 'java'
+
+task run(type: JavaExec) {
+  description = 'Start HTTPS client'
+
+  classpath sourceSets.main.runtimeClasspath
+  main = "io.github.mikolasan.httpsclient.Main"
+}
